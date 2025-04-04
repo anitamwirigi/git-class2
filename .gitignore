@@ -1,0 +1,4 @@
+# THE FOLLOWING FILES AND FOLDERS WILL BE IGNORED
+.env
+updates.html
+*.php
