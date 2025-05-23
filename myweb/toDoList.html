@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>To Do List</title>
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/tailwindcss/2.2.19/tailwind.min.css" rel="stylesheet">
+</head>
+<body class="min-h-screen bg-gray-100 py-10 px-4">
+  <div class="max-w-md mx-auto">
+    <div class="bg-white rounded-lg shadow-lg overflow-hidden">
+      <!-- Header -->
+      <div class="bg-blue-500 px-6 py-4">
+        <h1 class="text-white text-xl font-bold">My To Do List</h1>
+        <p class="text-blue-100 text-sm" id="todoCount">0 items</p>
+      </div>
+      
+      <!-- Add Task Form -->
+      <div class="px-6 py-4 border-b">
+        <div class="flex">
+          <input 
+            type="text" 
+            id="taskInput" 
+            placeholder="Add a new task..." 
+            class="flex-1 px-4 py-2 border border-gray-300 rounded-l focus:outline-none focus:ring-2 focus:ring-blue-500"
+          >
+          <button 
+            id="addTaskBtn" 
+            class="bg-blue-500 hover:bg-blue-600 text-white px-4 py-2 rounded-r transition-colors duration-200"
+          >
+            Add
+          </button>
+        </div>
+      </div>
+      
+      <!-- Task List -->
+      <ul id="taskList" class="divide-y divide-gray-200">
+        <!-- Tasks will be added here by JavaScript -->
+      </ul>
+      
+      <!-- Footer -->
+      <div class="px-6 py-4 bg-gray-50 flex justify-between">
+        <button id="clearCompletedBtn" class="text-gray-500 hover:text-gray-700">
+          Clear completed
+        </button>
+        <div class="flex space-x-2">
+          <button id="filterAllBtn" class="px-2 py-1 bg-blue-500 text-white rounded text-sm">All</button>
+          <button id="filterActiveBtn" class="px-2 py-1 bg-gray-200 text-gray-700 rounded text-sm">Active</button>
+          <button id="filterCompletedBtn" class="px-2 py-1 bg-gray-200 text-gray-700 rounded text-sm">Completed</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script src="./js/toDoList.js">
+
+  </script>
+</body>
+</html>

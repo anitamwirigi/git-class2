@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Dice Game</title>
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/tailwindcss/2.2.19/tailwind.min.css" rel="stylesheet">
+</head>
+<body class="min-h-screen bg-green-800 p-4 flex items-center justify-center">
+  <div class="bg-white rounded-lg shadow-xl max-w-lg w-full p-6">
+    <h1 class="text-3xl font-bold text-center text-gray-800 mb-6">Dice Game</h1>
+
+    <div class="flex justify-center space-x-8 mb-6">
+      <div id="die1" class="w-20 h-20 bg-red-500 rounded-lg text-white flex items-center justify-center text-5xl font-bold shadow-md">1</div>
+      <div id="die2" class="w-20 h-20 bg-red-500 rounded-lg text-white flex items-center justify-center text-5xl font-bold shadow-md">1</div>
+    </div>
+
+    <div class="text-center mb-6">
+      <p id="total" class="text-2xl font-bold mb-2">Total: 2</p>
+      <p id="message" class="text-lg text-gray-600">Press "Roll Dice" to start the game!</p>
+      <p id="point" class="text-lg text-blue-600 hidden">Your point: 0</p>
+    </div>
+
+    <button id="rollBtn" class="w-full bg-green-600 hover:bg-green-700 text-white font-bold py-3 px-4 rounded mb-6">
+      Roll Dice
+    </button>
+
+    <div class="flex justify-around text-center">
+      <div>
+        <h3 class="font-bold text-gray-700">Wins</h3>
+        <p id="wins" class="text-2xl font-bold text-green-600">0</p>
+      </div>
+      <div>
+        <h3 class="font-bold text-gray-700">Losses</h3>
+        <p id="losses" class="text-2xl font-bold text-red-600">0</p>
+      </div>
+      <div>
+        <h3 class="font-bold text-gray-700">Games</h3>
+        <p id="games" class="text-2xl font-bold text-blue-600">0</p>
+      </div>
+    </div>
+
+    <div class="mt-6 text-center">
+      <button id="resetBtn" class="text-red-500 hover:text-red-700 font-medium">
+        Reset Score
+      </button>
+    </div>
+  </div>
+
+  <script src="./js/diceGame.js">
+
+  </script>
+</body>
+</html>

@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Light/Dark Mode Toggle</title>
+    <link
+      href="https://cdnjs.cloudflare.com/ajax/libs/tailwindcss/2.2.19/tailwind.min.css"
+      rel="stylesheet"
+    />
+  </head>
+  <body class="min-h-screen transition-colors duration-300" id="body">
+    <div class="container mx-auto px-4 py-10">
+      <header class="flex justify-between items-center mb-12">
+        <h1 class="text-3xl font-bold" id="heading">Light/Dark Mode Toggle</h1>
+
+        <!-- Toggle Button -->
+        <button
+          id="toggleBtn"
+          class="flex items-center p-2 bg-gray-200 dark:bg-gray-700 rounded-full transition-colors duration-300"
+        >
+          <div
+            id="toggleCircle"
+            class="w-6 h-6 bg-white rounded-full shadow transform translate-x-0 transition-transform duration-300"
+          ></div>
+          <span id="sunIcon" class="ml-2 text-yellow-500">☀️</span>
+          <span id="moonIcon" class="ml-2 text-gray-400 hidden">🌙</span>
+        </button>
+      </header>
+
+      <main>
+        <div
+          class="bg-white dark:bg-gray-800 shadow-lg rounded-lg p-6 transition-colors duration-300"
+          id="card"
+        >
+          <h2
+            class="text-2xl font-bold mb-4 text-gray-800 dark:text-white transition-colors duration-300"
+            id="cardHeading"
+          >
+            Content
+          </h2>
+          <p
+            class="text-gray-600 dark:text-gray-300 mb-4 transition-colors duration-300"
+            id="cardText"
+          >
+            Toggle between light and dark mode using the button in the header.
+          </p>
+          <button
+            class="px-4 py-2 bg-blue-500 text-white rounded hover:bg-blue-600 transition-colors duration-300"
+            id="cardBtn"
+          >
+            Button
+          </button>
+        </div>
+      </main>
+    </div>
+
+    <script src="./js/darkMode.js"></script>
+  </body>
+</html>
